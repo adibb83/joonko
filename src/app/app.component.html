@@ -4,7 +4,7 @@
     <button (click)="newGame()" *ngIf="endGame">New Game</button>
    </div>
   <div class="board__header" *ngIf="!endGame">
-    <span>Current Player: {{currentPlayer| uppercase}}</span>
+    <span>Playing Now: {{currentPlayer| uppercase}}</span>
   </div>
   <div *ngFor="let row of [1,2,3]; let r = index" class="board__game">
    <button *ngFor="let userSelection of [1,2,3]; let c = index"
