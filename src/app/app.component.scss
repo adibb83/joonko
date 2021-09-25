@@ -1,0 +1,46 @@
+.board {
+  &__container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__header {
+    margin: 20px 0;
+  }
+
+  &__game {
+    .tik_button {
+      width: 100px;
+      height: 100px;
+      font-size: 40px;
+      font-weight: bold;
+      border: solid 1px black;
+      color: black;
+    }
+  }
+
+  &__winner {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 30px;
+      padding: 0 15px;
+      background-color: #4361ee;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  }
+}
+
+span {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 20px;
+}
