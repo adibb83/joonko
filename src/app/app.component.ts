@@ -28,7 +28,7 @@ export class AppComponent {
     this.playersSelection[this.currentPlayer as keyof playersSelection].push(
       `${row}${col}`
     );
-    this.checkWiningOptions(this.currentPlayer);
+    this.checkWinningOptions(this.currentPlayer);
   }
 
   setButtonMark(event: Event) {
@@ -38,7 +38,7 @@ export class AppComponent {
     element.disabled = true;
   }
 
-  checkWiningOptions(player: string) {
+  checkWinningOptions(player: string) {
     if (this.playersSelection[player as keyof playersSelection].length < 3) {
       this.setNextPlayer();
       return;
@@ -84,9 +84,9 @@ export class AppComponent {
       element.innerHTML = '&nbsp;';
       element.disabled = false;
     });
-    this.endGame = false;
     this.winner = '';
     this.currentPlayer = 'x';
+    this.endGame = false;
   }
 
   gameEnd(winnerName: string): void {
